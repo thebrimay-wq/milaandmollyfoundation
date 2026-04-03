@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mila & Molly Foundation — Rescue. Sanctuary. Love.</title>
+  <meta name="description" content="Mila & Molly Foundation supports dogs through rescue, sanctuary, medical care, and foster family placement — giving every dog the safety, compassion, and second chance they deserve.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    /* ═══════════════════════════════════════════
+       RESET & BASE
+    ═══════════════════════════════════════════ */
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg:          #F3EFEB;
+      --bg-2:        #EAE2DB;
+      --bg-3:        #E2D9D1;
+      --text:        #332524;
+      --accent:      #C66F4E;
+      --accent-h:    #D4896B;
+      --muted:       #7A6360;
+      --muted-light: #A8908D;
+      --border:      rgba(51, 37, 36, 0.10);
+      --border-m:    rgba(51, 37, 36, 0.18);
+      --hdr:         72px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ═══════════════════════════════════════════
+       TYPOGRAPHY SYSTEM
+    ═══════════════════════════════════════════ */
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--text);
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 4.5vw, 4rem);
+      font-weight: 500;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 3.2vw, 2.9rem);
+      font-weight: 500;
+      line-height: 1.18;
+      letter-spacing: -0.015em;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    p {
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 10.5px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+    }
+
+    .label::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 1px;
+      background: currentColor;
+      flex-shrink: 0;
+    }
+
+    /* ═══════════════════════════════════════════
+       BUTTONS
+    ═══════════════════════════════════════════ */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.875rem 1.875rem;
+      border-radius: 100px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13.5px;
+      font-weight: 500;
+      letter-spacing: 0.025em;
+      cursor: pointer;
+      transition: background 0.22s ease, color 0.22s ease,
+                  transform 0.22s ease, box-shadow 0.22s ease,
+                  border-color 0.22s ease;
+      border: 1.5px solid transparent;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-h);
+      border-color: var(--accent-h);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(198, 111, 78, 0.28);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border-color: var(--border-m);
+    }
+
+    .btn-ghost:hover {
+      background: var(--bg-2);
+      border-color: rgba(51, 37, 36, 0.3);
+    }
+
+    .btn-ghost-light {
+      background: transparent;
+      color: #F3EFEB;
+      border-color: rgba(243, 239, 235, 0.3);
+    }
+
+    .btn-ghost-light:hover {
+      background: rgba(243, 239, 235, 0.1);
+      border-color: rgba(243, 239, 235, 0.5);
+    }
+
+    /* ═══════════════════════════════════════════
+       LAYOUT
+    ═══════════════════════════════════════════ */
+
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 2.25rem;
+    }
+
+    section {
+      padding: 110px 0;
+    }
+
+    /* ═══════════════════════════════════════════
+       HEADER
+    ═══════════════════════════════════════════ */
+
+    #site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      height: var(--hdr);
+      display: flex;
+      align-items: center;
+      transition: background 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    #site-header.scrolled {
+      background: rgba(243, 239, 235, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 1px 0 var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 2.25rem;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--text);
+      letter-spacing: 0.01em;
+      flex-shrink: 0;
+    }
+
+    .logo-amp {
+      color: var(--accent);
+    }
+
+    .logo-img {
+      height: 36px;
+      width: auto;
+      display: block;
+      transition: opacity 0.2s ease;
+    }
+
+    .footer-logo-img {
+      height: 32px;
+      margin-bottom: 0.6rem;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 2.25rem;
+    }
+
+    .nav-link {
+      font-size: 13.5px;
+      font-weight: 400;
+      color: var(--muted);
+      transition: color 0.2s;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-link:hover {
+      color: var(--text);
+    }
+
+    .nav-cta {
+      padding: 0.6rem 1.25rem;
+      font-size: 13px;
+    }
+
+    /* ═══════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════ */
+
+    #hero {
+      padding: 0;
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(51, 37, 36, 0.58);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: calc(var(--hdr) + 72px) 2.25rem 96px;
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      color: rgba(243, 239, 235, 0.75);
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-kicker::before {
+      background: rgba(243, 239, 235, 0.75);
+    }
+
+    .hero-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-weight: 500;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+      color: #F3EFEB;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-headline em {
+      font-style: italic;
+      color: var(--accent-h);
+    }
+
+    .hero-body {
+      font-size: 1.1rem;
+      color: rgba(243, 239, 235, 0.72);
+      max-width: 540px;
+      line-height: 1.82;
+      margin-bottom: 2.75rem;
+      font-weight: 300;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 0.875rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* ═══════════════════════════════════════════
+       ABOUT
+    ═══════════════════════════════════════════ */
+
+    #about {
+      background: var(--bg-2);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 88px;
+      align-items: center;
+    }
+
+    .about-photo {
+      border-radius: 32px;
+      overflow: hidden;
+      aspect-ratio: 4 / 5;
+      position: relative;
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      transition: transform 0.7s ease;
+    }
+
+    .about-photo:hover img {
+      transform: scale(1.03);
+    }
+
+    .about-text .label {
+      margin-bottom: 1rem;
+    }
+
+    .about-text h2 {
+      margin-bottom: 1.6rem;
+    }
+
+    .about-text p + p {
+      margin-top: 1.1rem;
+    }
+
+    .about-text p:last-of-type {
+      font-style: italic;
+      color: var(--muted-light);
+    }
+
+    /* ═══════════════════════════════════════════
+       WHAT WE DO
+    ═══════════════════════════════════════════ */
+
+    #what-we-do {
+      background: var(--bg);
+    }
+
+    .wwd-header {
+      text-align: center;
+      margin-bottom: 4.5rem;
+    }
+
+    .wwd-header .label {
+      justify-content: center;
+    }
+
+    .wwd-header .label::before {
+      display: none;
+    }
+
+    .wwd-header h2 {
+      margin-top: 0;
+    }
+
+    .wwd-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5px;
+      background: var(--border);
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .wwd-card {
+      background: var(--bg);
+      padding: 3.25rem 3rem;
+      transition: background 0.3s ease;
+      position: relative;
+    }
+
+    .wwd-card:hover {
+      background: var(--bg-2);
+    }
+
+    .wwd-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 400;
+      color: rgba(198, 111, 78, 0.18);
+      line-height: 1;
+      margin-bottom: 1.75rem;
+      display: block;
+    }
+
+    .wwd-card h3 {
+      margin-bottom: 0.875rem;
+      color: var(--text);
+    }
+
+    .wwd-card p {
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+
+    /* ═══════════════════════════════════════════
+       WHY IT MATTERS
+    ═══════════════════════════════════════════ */
+
+    #why {
+      background: var(--text);
+      padding: 120px 0;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 88px;
+      align-items: center;
+    }
+
+    .why-text .label {
+      color: var(--accent);
+    }
+
+    .why-text h2 {
+      color: #F3EFEB;
+      margin-bottom: 1.6rem;
+    }
+
+    .why-text p {
+      color: rgba(243, 239, 235, 0.58);
+      line-height: 1.85;
+    }
+
+    .why-text p + p {
+      margin-top: 1.1rem;
+    }
+
+    .why-photo {
+      border-radius: 32px;
+      overflow: hidden;
+      aspect-ratio: 3 / 4;
+    }
+
+    .why-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+
+    /* ═══════════════════════════════════════════
+       HOW TO HELP
+    ═══════════════════════════════════════════ */
+
+    #help {
+      background: var(--bg-2);
+    }
+
+    .help-header {
+      max-width: 580px;
+      margin-bottom: 4rem;
+    }
+
+    .help-header h2 {
+      margin-bottom: 1.1rem;
+    }
+
+    .help-header p {
+      font-size: 1rem;
+    }
+
+    .help-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .help-card {
+      padding: 2.75rem 2.25rem;
+      background: var(--bg);
+      border-radius: 8px;
+      border: 1.5px solid var(--border);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .help-card:hover {
+      box-shadow: 0 8px 32px rgba(51, 37, 36, 0.07);
+      transform: translateY(-3px);
+    }
+
+    .help-roman {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+
+    .help-card h3 {
+      margin-bottom: 0.875rem;
+    }
+
+    .help-card p {
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+
+    /* ═══════════════════════════════════════════
+       CONTACT
+    ═══════════════════════════════════════════ */
+
+    #contact {
+      background: var(--bg);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 88px;
+      align-items: start;
+    }
+
+    .contact-info .label {
+      margin-bottom: 1rem;
+    }
+
+    .contact-info h2 {
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-info > p {
+      margin-bottom: 2.5rem;
+      font-size: 1rem;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .contact-detail-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+
+    .contact-detail-item:hover {
+      color: var(--accent);
+    }
+
+    .detail-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+      opacity: 0.6;
+    }
+
+    /* Form */
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .form-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      background: var(--bg-2);
+      border: 1.5px solid transparent;
+      border-radius: 7px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--text);
+      transition: border-color 0.22s, background 0.22s;
+      outline: none;
+      resize: none;
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: var(--muted-light);
+      opacity: 0.7;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+      border-color: rgba(198, 111, 78, 0.45);
+      background: rgba(255,255,255,0.7);
+    }
+
+    .form-textarea {
+      min-height: 148px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      margin-top: 0.25rem;
+      transition: background 0.22s ease, transform 0.22s ease,
+                  box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+
+    /* ═══════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════ */
+
+    footer {
+      background: var(--text);
+      padding: 64px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #F3EFEB;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-tagline {
+      font-size: 12.5px;
+      color: rgba(243, 239, 235, 0.38);
+      font-weight: 300;
+      letter-spacing: 0.03em;
+    }
+
+    .footer-love {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      font-style: italic;
+      color: rgba(243, 239, 235, 0.35);
+    }
+
+    /* ═══════════════════════════════════════════
+       SCROLL REVEAL
+    ═══════════════════════════════════════════ */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-d1 { transition-delay: 0.08s; }
+    .reveal-d2 { transition-delay: 0.16s; }
+    .reveal-d3 { transition-delay: 0.24s; }
+    .reveal-d4 { transition-delay: 0.32s; }
+
+    /* ═══════════════════════════════════════════
+       RESPONSIVE — TABLET
+    ═══════════════════════════════════════════ */
+
+    @media (max-width: 960px) {
+      section { padding: 80px 0; }
+      #why    { padding: 80px 0; }
+
+      .hero-content {
+        padding: calc(var(--hdr) + 48px) 1.5rem 80px;
+      }
+
+      .hero-body { max-width: 100%; }
+
+      .about-grid,
+      .why-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .about-photo {
+        aspect-ratio: 16 / 9;
+        order: -1;
+      }
+
+      .why-photo {
+        aspect-ratio: 16 / 9;
+        order: 2;
+      }
+
+      .wwd-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .help-grid {
+        grid-template-columns: 1fr;
+        gap: 1.1rem;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      h2 { font-size: 1.85rem; }
+
+      .hero-headline { font-size: 2.2rem; }
+
+      .hero-ctas {
+        flex-direction: column;
+      }
+
+      .hero-ctas .btn {
+        width: 100%;
+      }
+
+      .wwd-card { padding: 2.25rem 1.75rem; }
+      .help-card { padding: 2rem 1.75rem; }
+
+      .site-nav .nav-link { display: none; }
+    }
+
+    /* ═══════════════════════════════════════════
+       ACCESSIBILITY & FINE DETAILS
+    ═══════════════════════════════════════════ */
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+
+    ::selection {
+      background: rgba(198, 111, 78, 0.18);
+      color: var(--text);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       HEADER
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+
+  <header id="site-header" role="banner">
+    <div class="header-inner">
+      <a href="#" class="logo" aria-label="Mila &amp; Molly Foundation — home">
+        <img src="images/mila and molly logo white.svg" alt="Mila &amp; Molly Foundation" class="logo-img" id="nav-logo">
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#about"       class="nav-link">About</a>
+        <a href="#what-we-do" class="nav-link">What we do</a>
+        <a href="#help"        class="nav-link">Help dogs</a>
+        <a href="#contact"     class="nav-link">Contact</a>
+        <a href="#contact"     class="btn btn-primary nav-cta">Contact us</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         HERO
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+
+    <section id="hero" aria-label="Introduction">
+
+      <div class="hero-bg" aria-hidden="true">
+        <img
+          src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1600&h=1200&dpr=1"
+          alt=""
+          loading="eager"
+          fetchpriority="high"
+        >
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <span class="label hero-kicker">Mila &amp; Molly Foundation</span>
+
+        <h1 class="hero-headline">
+          A safe place for dogs<br>
+          to be <em>rescued, healed,</em><br>
+          and deeply loved.
+        </h1>
+
+        <p class="hero-body">
+          Mila &amp; Molly Foundation supports dogs through rescue, sanctuary, medical care, and foster family placement — giving every dog the safety, compassion, and second chance they deserve.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">Contact us</a>
+          <a href="#help"    class="btn btn-ghost-light">Support our mission</a>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         ABOUT / MISSION
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+
+    <section id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-grid">
+
+          <div class="about-photo reveal">
+            <img
+              src="https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=900&h=1100&dpr=1"
+              alt="A calm and soulful dog resting comfortably"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="about-text reveal reveal-d1">
+            <span class="label">About</span>
+            <h2 id="about-heading">All things dogs.<br>All heart.</h2>
+            <p>
+              Mila &amp; Molly Foundation exists to care for dogs in the ways that matter most. From immediate rescue and medical attention to long-term sanctuary and loving foster support, we are building a foundation centered around compassion, healing, and hope.
+            </p>
+            <p>
+              We believe every dog deserves safety, dignity, and the chance to live a healthy, loved life.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         WHAT WE DO
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+
+    <section id="what-we-do" aria-labelledby="wwd-heading">
+      <div class="container">
+
+        <div class="wwd-header reveal">
+          <span class="label">What we do</span>
+          <h2 id="wwd-heading">What we do for dogs</h2>
+        </div>
+
+        <div class="wwd-grid">
+
+          <div class="wwd-card reveal reveal-d1">
+            <span class="wwd-num" aria-hidden="true">01</span>
+            <h3>Rescue &amp; Charity</h3>
+            <p>We help dogs in urgent need by providing rescue support, funding, and compassionate care where it is needed most.</p>
+          </div>
+
+          <div class="wwd-card reveal reveal-d2">
+            <span class="wwd-num" aria-hidden="true">02</span>
+            <h3>Sanctuary</h3>
+            <p>We create a safe, loving place for dogs who need stability, recovery, or long-term support.</p>
+          </div>
+
+          <div class="wwd-card reveal reveal-d3">
+            <span class="wwd-num" aria-hidden="true">03</span>
+            <h3>Medical Care</h3>
+            <p>We support dogs with the medical attention they need to heal, recover, and move toward a better life.</p>
+          </div>
+
+          <div class="wwd-card reveal reveal-d4">
+            <span class="wwd-num" aria-hidden="true">04</span>
+            <h3>Foster Family Support</h3>
+            <p>We believe healing happens best in loving environments. We help connect dogs with foster care and the support needed along the way.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         WHY IT MATTERS
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+
+    <section id="why" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="why-grid">
+
+          <div class="why-text reveal">
+            <span class="label">Why it matters</span>
+            <h2 id="why-heading">Every dog deserves a safe place to land.</h2>
+            <p>
+              Some dogs need urgent help. Some need time to heal. Some need medical care, stability, or simply a place where they are finally safe.
+            </p>
+            <p>
+              At Mila &amp; Molly Foundation, we are creating a place rooted in compassion — where dogs can be protected, cared for, and given the love they deserve.
+            </p>
+          </div>
+
+          <div class="why-photo reveal reveal-d1">
+            <img
+              src="https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=900&h=1200&dpr=1"
+              alt="A dog with a gentle, hopeful expression looking quietly into the distance"
+              loading="lazy"
+            >
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         HOW TO HELP
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+
+    <section id="help" aria-labelledby="help-heading">
+      <div class="container">
+
+        <div class="help-header reveal">
+          <span class="label">Help dogs</span>
+          <h2 id="help-heading">There are many ways<br>to make a difference</h2>
+          <p>Whether you want to support our mission, become part of the journey, or simply learn more, we would love to hear from you.</p>
+        </div>
+
+        <div class="help-grid">
+
+          <div class="help-card reveal reveal-d1">
+            <span class="help-roman" aria-hidden="true">I.</span>
+            <h3>Support our mission</h3>
+            <p>Your support helps us care for dogs through rescue, rehabilitation, medical treatment, and safe placement.</p>
+          </div>
+
+          <div class="help-card reveal reveal-d2">
+            <span class="help-roman" aria-hidden="true">II.</span>
+            <h3>Foster or partner with us</h3>
+            <p>We welcome foster families, supporters, and community partners who believe in giving dogs a second chance.</p>
+          </div>
+
+          <div class="help-card reveal reveal-d3">
+            <span class="help-roman" aria-hidden="true">III.</span>
+            <h3>Reach out</h3>
+            <p>We are just getting started, and we would love to connect with people who want to help us grow.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         CONTACT
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-grid">
+
+          <div class="contact-info reveal">
+            <span class="label">Contact</span>
+            <h2 id="contact-heading">Get in touch</h2>
+            <p>
+              Have a question, want to support the foundation, or interested in getting involved? Reach out and we'll get back to you as soon as we can.
+            </p>
+
+            <div class="contact-details">
+              <a
+                href="mailto:hello@milamollyfoundation.org"
+                class="contact-detail-item"
+                aria-label="Email us at hello@milamollyfoundation.org"
+              >
+                <span class="detail-dot" aria-hidden="true"></span>
+                hello@milamollyfoundation.org
+              </a>
+              <a
+                href="https://instagram.com/milamollyfoundation"
+                class="contact-detail-item"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow us on Instagram @milamollyfoundation"
+              >
+                <span class="detail-dot" aria-hidden="true"></span>
+                @milamollyfoundation
+              </a>
+            </div>
+          </div>
+
+          <form
+            class="contact-form reveal reveal-d1"
+            id="contact-form"
+            novalidate
+            aria-label="Contact form"
+          >
+            <div class="form-group">
+              <label class="form-label" for="name">Name</label>
+              <input
+                class="form-input"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                autocomplete="name"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input
+                class="form-input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="your@email.com"
+                autocomplete="email"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Message</label>
+              <textarea
+                class="form-textarea"
+                id="message"
+                name="message"
+                placeholder="Tell us how you'd like to get involved, or simply say hello..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+              Send message
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       FOOTER
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <img src="images/mila and molly logo white.svg" alt="Mila &amp; Molly Foundation" class="logo-img footer-logo-img">
+          <p class="footer-tagline">Rescue. Sanctuary. Medical care. Foster support.</p>
+        </div>
+        <p class="footer-love">Made with love for dogs.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       JAVASCRIPT
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+
+  <script>
+
+    /* ── Header scroll behavior ── */
+    const header  = document.getElementById('site-header');
+    const navLogo = document.getElementById('nav-logo');
+    const LOGO_DARK  = 'images/mila and molly logo.svg';
+    const LOGO_WHITE = 'images/mila and molly logo white.svg';
+
+    function updateHeader() {
+      if (window.scrollY > 24) {
+        header.classList.add('scrolled');
+        navLogo.src = LOGO_DARK;
+      } else {
+        header.classList.remove('scrolled');
+        navLogo.src = LOGO_WHITE;
+      }
+    }
+
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    updateHeader();
+
+
+    /* ── Scroll reveal (IntersectionObserver) ── */
+    const revealEls = document.querySelectorAll('.reveal');
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -48px 0px' }
+    );
+
+    revealEls.forEach(el => revealObserver.observe(el));
+
+
+    /* ── Contact form ── */
+    const form   = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      submitBtn.textContent = 'Message sent ✓';
+      submitBtn.style.background    = '#6A9A72';
+      submitBtn.style.borderColor   = '#6A9A72';
+      submitBtn.style.pointerEvents = 'none';
+
+      setTimeout(() => {
+        submitBtn.textContent = 'Send message';
+        submitBtn.style.background    = '';
+        submitBtn.style.borderColor   = '';
+        submitBtn.style.pointerEvents = '';
+        form.reset();
+      }, 3500);
+    });
+
+
+    /* ── Smooth anchor scroll (fallback for older browsers) ── */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const id = this.getAttribute('href');
+        if (id === '#') return;
+        const target = document.querySelector(id);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+  </script>
+
+</body>
+</html>
