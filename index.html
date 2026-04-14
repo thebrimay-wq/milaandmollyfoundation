@@ -3,1256 +3,275 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mila & Molly Foundation — Rescue. Sanctuary. Love.</title>
-  <meta name="description" content="Mila & Molly Foundation supports dogs through rescue, sanctuary, medical care, and foster family placement — giving every dog the safety, compassion, and second chance they deserve.">
 
+  <title>Front Door — Real Estate Services in El Segundo &amp; the South Bay</title>
+  <meta name="description" content="Front Door is a full-service real estate company in El Segundo, CA. We handle escrow, buying, selling, and everything in between — so the process is clearer for you.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Front Door — Real Estate Services in El Segundo &amp; the South Bay">
+  <meta property="og:description" content="From escrow to closing, Front Door simplifies real estate for buyers, sellers, and homeowners across El Segundo and the South Bay.">
+  <meta property="og:url" content="https://frontdoorrealestate.com/">
+  <meta property="og:site_name" content="Front Door">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://frontdoorrealestate.com/">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <style>
-
-    /* ═══════════════════════════════════════════
-       RESET & BASE
-    ═══════════════════════════════════════════ */
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    :root {
-      --bg:          #F3EFEB;
-      --bg-2:        #EAE2DB;
-      --bg-3:        #E2D9D1;
-      --text:        #332524;
-      --accent:      #C66F4E;
-      --accent-h:    #D4896B;
-      --muted:       #7A6360;
-      --muted-light: #A8908D;
-      --border:      rgba(51, 37, 36, 0.10);
-      --border-m:    rgba(51, 37, 36, 0.18);
-      --hdr:         72px;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Inter', sans-serif;
-      font-weight: 300;
-      font-size: 17px;
-      line-height: 1.8;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      overflow-x: hidden;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* ═══════════════════════════════════════════
-       TYPOGRAPHY SYSTEM
-    ═══════════════════════════════════════════ */
-
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-      color: var(--text);
-    }
-
-    h1 {
-      font-size: clamp(2.6rem, 4.5vw, 4rem);
-      font-weight: 500;
-      line-height: 1.12;
-      letter-spacing: -0.02em;
-    }
-
-    h2 {
-      font-size: clamp(2rem, 3.2vw, 2.9rem);
-      font-weight: 500;
-      line-height: 1.18;
-      letter-spacing: -0.015em;
-    }
-
-    h3 {
-      font-size: 1.25rem;
-      font-weight: 500;
-      line-height: 1.35;
-    }
-
-    p {
-      color: var(--muted);
-      font-weight: 300;
-    }
-
-    .label {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.65rem;
-      font-size: 10.5px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.25rem;
-    }
-
-    .label::before {
-      content: '';
-      display: block;
-      width: 20px;
-      height: 1px;
-      background: currentColor;
-      flex-shrink: 0;
-    }
-
-    /* ═══════════════════════════════════════════
-       BUTTONS
-    ═══════════════════════════════════════════ */
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.875rem 1.875rem;
-      border-radius: 100px;
-      font-family: 'Inter', sans-serif;
-      font-size: 13.5px;
-      font-weight: 500;
-      letter-spacing: 0.025em;
-      cursor: pointer;
-      transition: background 0.22s ease, color 0.22s ease,
-                  transform 0.22s ease, box-shadow 0.22s ease,
-                  border-color 0.22s ease;
-      border: 1.5px solid transparent;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
-    }
-
-    .btn-primary:hover {
-      background: var(--accent-h);
-      border-color: var(--accent-h);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 28px rgba(198, 111, 78, 0.28);
-    }
-
-    .btn-ghost {
-      background: transparent;
-      color: var(--text);
-      border-color: var(--border-m);
-    }
-
-    .btn-ghost:hover {
-      background: var(--bg-2);
-      border-color: rgba(51, 37, 36, 0.3);
-    }
-
-    .btn-ghost-light {
-      background: transparent;
-      color: #F3EFEB;
-      border-color: rgba(243, 239, 235, 0.3);
-    }
-
-    .btn-ghost-light:hover {
-      background: rgba(243, 239, 235, 0.1);
-      border-color: rgba(243, 239, 235, 0.5);
-    }
-
-    /* ═══════════════════════════════════════════
-       LAYOUT
-    ═══════════════════════════════════════════ */
-
-    .container {
-      width: 100%;
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 0 2.25rem;
-    }
-
-    section {
-      padding: 110px 0;
-    }
-
-    /* ═══════════════════════════════════════════
-       HEADER
-    ═══════════════════════════════════════════ */
-
-    #site-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 200;
-      height: var(--hdr);
-      display: flex;
-      align-items: center;
-      transition: background 0.35s ease, box-shadow 0.35s ease;
-    }
-
-    #site-header.scrolled {
-      background: rgba(243, 239, 235, 0.94);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      box-shadow: 0 1px 0 var(--border);
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      padding: 0 2.25rem;
-    }
-
-    .logo {
-      flex-shrink: 0;
-      transition: filter 0.3s ease;
-    }
-
-    .logo svg {
-      height: 38px;
-      width: auto;
-      display: block;
-    }
-
-    /* White logo when floating over dark hero */
-    #site-header:not(.scrolled) .logo {
-      filter: brightness(0) invert(1);
-    }
-
-    .footer-brand-logo svg {
-      height: 34px;
-      width: auto;
-      display: block;
-      margin-bottom: 0.6rem;
-    }
-
-    /* Always white in footer */
-    .footer-brand-logo {
-      filter: brightness(0) invert(1);
-    }
-
-    .site-nav {
-      display: flex;
-      align-items: center;
-      gap: 2.25rem;
-    }
-
-    #site-header .nav-link {
-      font-size: 13.5px;
-      font-weight: 400;
-      color: #ffffff;
-      transition: color 0.25s ease;
-      letter-spacing: 0.01em;
-    }
-
-    #site-header .nav-link:hover {
-      color: rgba(255, 255, 255, 0.6);
-    }
-
-    /* Revert to dark once scrolled onto the light header */
-    #site-header.scrolled .nav-link {
-      color: var(--muted);
-    }
-
-    #site-header.scrolled .nav-link:hover {
-      color: var(--text);
-    }
-
-    .nav-cta {
-      padding: 0.6rem 1.25rem;
-      font-size: 13px;
-    }
-
-    /* ═══════════════════════════════════════════
-       HERO
-    ═══════════════════════════════════════════ */
-
-    #hero {
-      padding: 0;
-      min-height: 100vh;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-    }
-
-    .hero-bg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 25%;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(51, 37, 36, 0.58);
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      padding: calc(var(--hdr) + 72px) 2.25rem 96px;
-      max-width: 900px;
-      width: 100%;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .hero-kicker {
-      color: rgba(243, 239, 235, 0.75);
-      margin-bottom: 1.75rem;
-    }
-
-    .hero-kicker::before {
-      background: rgba(243, 239, 235, 0.75);
-    }
-
-    .hero-headline {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(3rem, 6vw, 5.5rem);
-      font-weight: 500;
-      line-height: 1.08;
-      letter-spacing: -0.025em;
-      color: #F3EFEB;
-      margin-bottom: 1.75rem;
-    }
-
-    .hero-headline em {
-      font-style: italic;
-      color: var(--accent-h);
-    }
-
-    .hero-body {
-      font-size: 1.1rem;
-      color: rgba(243, 239, 235, 0.72);
-      max-width: 540px;
-      line-height: 1.82;
-      margin-bottom: 2.75rem;
-      font-weight: 300;
-    }
-
-    .hero-ctas {
-      display: flex;
-      gap: 0.875rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    /* ═══════════════════════════════════════════
-       ABOUT
-    ═══════════════════════════════════════════ */
-
-    #about {
-      background: var(--bg-2);
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 88px;
-      align-items: center;
-    }
-
-    .about-photo {
-      border-radius: 32px;
-      overflow: hidden;
-      aspect-ratio: 4 / 5;
-      position: relative;
-    }
-
-    .about-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 30%;
-      transition: transform 0.7s ease;
-    }
-
-    .about-photo:hover img {
-      transform: scale(1.03);
-    }
-
-    .about-text .label {
-      margin-bottom: 1rem;
-    }
-
-    .about-text h2 {
-      margin-bottom: 1.6rem;
-    }
-
-    .about-text p + p {
-      margin-top: 1.1rem;
-    }
-
-    .about-text p:last-of-type {
-      font-style: italic;
-      color: var(--muted-light);
-    }
-
-    /* ═══════════════════════════════════════════
-       WHAT WE DO
-    ═══════════════════════════════════════════ */
-
-    #what-we-do {
-      background: var(--bg);
-    }
-
-    .wwd-header {
-      text-align: center;
-      margin-bottom: 4.5rem;
-    }
-
-    .wwd-header .label {
-      justify-content: center;
-    }
-
-    .wwd-header .label::before {
-      display: none;
-    }
-
-    .wwd-header h2 {
-      margin-top: 0;
-    }
-
-    .wwd-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5px;
-      background: var(--border);
-      border: 1.5px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .wwd-card {
-      background: var(--bg);
-      padding: 3.25rem 3rem;
-      transition: background 0.3s ease;
-      position: relative;
-    }
-
-    .wwd-card:hover {
-      background: var(--bg-2);
-    }
-
-    .wwd-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      font-weight: 400;
-      color: rgba(198, 111, 78, 0.18);
-      line-height: 1;
-      margin-bottom: 1.75rem;
-      display: block;
-    }
-
-    .wwd-card h3 {
-      margin-bottom: 0.875rem;
-      color: var(--text);
-    }
-
-    .wwd-card p {
-      font-size: 0.95rem;
-      line-height: 1.75;
-    }
-
-    /* ═══════════════════════════════════════════
-       WHY IT MATTERS
-    ═══════════════════════════════════════════ */
-
-    #why {
-      background: var(--text);
-      padding: 120px 0;
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 88px;
-      align-items: center;
-    }
-
-    .why-text .label {
-      color: var(--accent);
-    }
-
-    .why-text h2 {
-      color: #F3EFEB;
-      margin-bottom: 1.6rem;
-    }
-
-    .why-text p {
-      color: rgba(243, 239, 235, 0.58);
-      line-height: 1.85;
-    }
-
-    .why-text p + p {
-      margin-top: 1.1rem;
-    }
-
-    .why-photo {
-      border-radius: 32px;
-      overflow: hidden;
-      aspect-ratio: 3 / 4;
-    }
-
-    .why-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 20%;
-    }
-
-    /* ═══════════════════════════════════════════
-       HOW TO HELP
-    ═══════════════════════════════════════════ */
-
-    #help {
-      background: var(--bg-2);
-    }
-
-    .help-header {
-      max-width: 580px;
-      margin-bottom: 4rem;
-    }
-
-    .help-header h2 {
-      margin-bottom: 1.1rem;
-    }
-
-    .help-header p {
-      font-size: 1rem;
-    }
-
-    .help-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-
-    .help-card {
-      padding: 2.75rem 2.25rem;
-      background: var(--bg);
-      border-radius: 8px;
-      border: 1.5px solid var(--border);
-      transition: box-shadow 0.3s ease, transform 0.3s ease;
-    }
-
-    .help-card:hover {
-      box-shadow: 0 8px 32px rgba(51, 37, 36, 0.07);
-      transform: translateY(-3px);
-    }
-
-    .help-roman {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.15rem;
-      font-weight: 400;
-      font-style: italic;
-      color: var(--accent);
-      margin-bottom: 1.25rem;
-      display: block;
-    }
-
-    .help-card h3 {
-      margin-bottom: 0.875rem;
-    }
-
-    .help-card p {
-      font-size: 0.95rem;
-      line-height: 1.75;
-    }
-
-    /* ═══════════════════════════════════════════
-       CONTACT
-    ═══════════════════════════════════════════ */
-
-    #contact {
-      background: var(--bg);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 88px;
-      align-items: start;
-    }
-
-    .contact-info .label {
-      margin-bottom: 1rem;
-    }
-
-    .contact-info h2 {
-      margin-bottom: 1.25rem;
-    }
-
-    .contact-info > p {
-      margin-bottom: 2.5rem;
-      font-size: 1rem;
-    }
-
-    .contact-details {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .contact-detail-item {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-size: 0.95rem;
-      color: var(--muted);
-      transition: color 0.2s;
-    }
-
-    .contact-detail-item:hover {
-      color: var(--accent);
-    }
-
-    .detail-dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--accent);
-      flex-shrink: 0;
-      opacity: 0.6;
-    }
-
-    /* Form */
-
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1.1rem;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.45rem;
-    }
-
-    .form-label {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text);
-    }
-
-    .form-input,
-    .form-textarea {
-      width: 100%;
-      padding: 0.9rem 1rem;
-      background: var(--bg-2);
-      border: 1.5px solid transparent;
-      border-radius: 7px;
-      font-family: 'Inter', sans-serif;
-      font-size: 15px;
-      font-weight: 300;
-      color: var(--text);
-      transition: border-color 0.22s, background 0.22s;
-      outline: none;
-      resize: none;
-    }
-
-    .form-input::placeholder,
-    .form-textarea::placeholder {
-      color: var(--muted-light);
-      opacity: 0.7;
-    }
-
-    .form-input:focus,
-    .form-textarea:focus {
-      border-color: rgba(198, 111, 78, 0.45);
-      background: rgba(255,255,255,0.7);
-    }
-
-    .form-textarea {
-      min-height: 148px;
-    }
-
-    .btn-submit {
-      width: 100%;
-      margin-top: 0.25rem;
-      transition: background 0.22s ease, transform 0.22s ease,
-                  box-shadow 0.22s ease, border-color 0.22s ease;
-    }
-
-    /* ═══════════════════════════════════════════
-       FOOTER
-    ═══════════════════════════════════════════ */
-
-    footer {
-      background: var(--text);
-      padding: 64px 0;
-    }
-
-    .footer-inner {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-    }
-
-    .footer-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem;
-      font-weight: 500;
-      color: #F3EFEB;
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-
-    .footer-tagline {
-      font-size: 12.5px;
-      color: rgba(243, 239, 235, 0.38);
-      font-weight: 300;
-      letter-spacing: 0.03em;
-    }
-
-    .footer-love {
-      font-family: 'Playfair Display', serif;
-      font-size: 13px;
-      font-style: italic;
-      color: rgba(243, 239, 235, 0.35);
-    }
-
-    /* ═══════════════════════════════════════════
-       SCROLL REVEAL
-    ═══════════════════════════════════════════ */
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-                  transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .reveal.in-view {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .reveal-d1 { transition-delay: 0.08s; }
-    .reveal-d2 { transition-delay: 0.16s; }
-    .reveal-d3 { transition-delay: 0.24s; }
-    .reveal-d4 { transition-delay: 0.32s; }
-
-    /* ═══════════════════════════════════════════
-       RESPONSIVE — TABLET
-    ═══════════════════════════════════════════ */
-
-    @media (max-width: 960px) {
-      section { padding: 80px 0; }
-      #why    { padding: 80px 0; }
-
-      .hero-content {
-        padding: calc(var(--hdr) + 48px) 1.5rem 80px;
-      }
-
-      .hero-body { max-width: 100%; }
-
-      .about-grid,
-      .why-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-      }
-
-      .about-photo {
-        aspect-ratio: 16 / 9;
-        order: -1;
-      }
-
-      .why-photo {
-        aspect-ratio: 16 / 9;
-        order: 2;
-      }
-
-      .wwd-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .help-grid {
-        grid-template-columns: 1fr;
-        gap: 1.1rem;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        gap: 1.5rem;
-        align-items: flex-start;
-      }
-    }
-
-    @media (max-width: 640px) {
-      h2 { font-size: 1.85rem; }
-
-      .hero-headline { font-size: 2.2rem; }
-
-      .hero-ctas {
-        flex-direction: column;
-      }
-
-      .hero-ctas .btn {
-        width: 100%;
-      }
-
-      .wwd-card { padding: 2.25rem 1.75rem; }
-      .help-card { padding: 2rem 1.75rem; }
-
-      .site-nav .nav-link { display: none; }
-    }
-
-    /* ═══════════════════════════════════════════
-       ACCESSIBILITY & FINE DETAILS
-    ═══════════════════════════════════════════ */
-
-    :focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 3px;
-      border-radius: 3px;
-    }
-
-    ::selection {
-      background: rgba(198, 111, 78, 0.18);
-      color: var(--text);
-    }
-
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Schema.org local business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Front Door",
+    "description": "Full-service real estate company offering escrow, buying, and selling services in El Segundo, CA and the South Bay.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "El Segundo",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "areaServed": "South Bay, Los Angeles, CA",
+    "url": "https://frontdoorrealestate.com"
+  }
+  </script>
 </head>
-
 <body>
 
-  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-       HEADER
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
-  <header id="site-header" role="banner">
+  <!-- ══ HEADER ══ -->
+  <header class="site-header" role="banner">
     <div class="header-inner">
-      <a href="#" class="logo" aria-label="Mila &amp; Molly Foundation — home">
-        <svg xmlns="http://www.w3.org/2000/svg" width="221.56" height="41.31" viewBox="0 0 221.56 41.31" aria-hidden="true" focusable="false">
-          <defs><style>.nc1{font-family:CanelaText-Medium,'Canela Text';font-size:16.99px;font-weight:500}.nc1,.nc2,.nc3{fill:#c46a4a}.nc4{letter-spacing:.65em}.nc5{letter-spacing:.7em}.nc6{letter-spacing:.61em}.nc2{font-family:Gotham-Bold,Gotham;font-size:9.84px}.nc2,.nc7{font-weight:700}.nc8{letter-spacing:0em}.nc7{fill:#3a2e2a;font-family:CanelaText-Bold,'Canela Text';font-size:27.89px}.nc9{letter-spacing:0em}</style></defs>
-          <g><g><g>
-            <text class="nc7" transform="translate(145.25 24.15)"><tspan class="nc8" x="0" y="0">M</tspan><tspan x="26.69" y="0">o</tspan><tspan class="nc8" x="44.27" y="0">l</tspan><tspan class="nc9" x="52.75" y="0">l</tspan><tspan x="61.64" y="0">y</tspan></text>
-            <text class="nc7" transform="translate(70.02 24.15)"><tspan class="nc8" x="0" y="0">Mil</tspan><tspan x="43.76" y="0">a</tspan></text>
-            <text class="nc1" transform="translate(130.88 21.65)"><tspan x="0" y="0">&amp;</tspan></text>
-          </g>
-          <text class="nc2" transform="translate(70.02 38.39)"><tspan class="nc5" x="0" y="0">FOUN</tspan><tspan class="nc4" x="57.61" y="0">D</tspan><tspan class="nc6" x="71.71" y="0">A</tspan><tspan class="nc5" x="85.49" y="0">TION</tspan></text>
-          <g>
-            <path class="nc3" d="M28.51,16.07c-.87-1.17-1.46-2.53-1.89-3.93-.48-1.5-.94-3.01-1.38-4.53-.6-2.04-1.16-4.09-1.82-6.16-.15-.46-.52-.74-.96-.98-1.24-.65-2.51.02-3.26,1-.56.7-.96,1.5-1.31,2.27-.44,1-.79,2-1.08,3.05-.12.44-.24.98-.38,1.4-.09.25-.17.51-.38.66-.08.06-.22.13-.4.19-.66.23-1.47.3-2.16.47-2.1.61-3.97,1.62-5.8,2.76-.78.53-1.61,1.03-2.2,1.84-.48.74-.52,1.66-.6,2.49-.04.51-.07,1-.15,1.42-.06.3-.14.67-.33.84-.17.13-.86.41-1.14.52-.88.33-1.82.76-1.85,1.9-.03.42.08.91.13,1.27-.19.16-.41.34-.6.54-.6.6-1.03,1.49-.94,2.38,0,.06.02.21.02.27.08,2.53.81,4.98,2.98,6.51,1.23.92,2.68,1.36,4.03,1.08.01.02.03.05.05.07.45.55,1.24.81,1.93.81.93.02,1.69-.29,2.5-.53.1.04.21.08.22.09.97.38,1.94.79,2.87,1.24,1.37.66,2.64,1.4,3.72,2.5.12.12.29.17.47.13.28-.06.45-.34.38-.61-.21-.91-.75-1.72-1.39-2.39-1.59-1.61-3.72-2.41-5.83-2.99-.29-.09-.61-.06-.88.05-.82.33-1.75,1.02-2.65,1.06.24-.15.47-.34.69-.55l.08-.08s.05-.05.09-.1c.41-.55-.35-1.15-.8-.59-.6.58-1.45.93-2.29.88-1.75-.12-3.43-1.57-4.12-3.17-.37-.84-.52-1.77-.57-2.74-.02-.3-.02-.64-.03-.95-.05-.51.14-.89.56-1.3.22-.22.52-.41.78-.66.08-.08.15-.18.2-.28.38.24.8.04,1-.49.34-.88.16-1.32-.2-1.76.02,0,.04-.01.05-.02.46-.17.9-.33,1.35-.56.45-.24.79-.68.99-1.12.36-.81.42-1.71.52-2.51.07-.53.1-1.11.33-1.56.44-.49,1.09-.87,1.69-1.24,1.25-.74,2.61-1.39,3.96-1.9.55-.2,1.07-.38,1.61-.46,1.22-.19,2.56-.28,3.52-1.21.76-.77.98-1.8,1.28-2.77.29-.96.67-1.93,1.1-2.83.2-.42.43-.83.66-1.19.08-.12.18-.27.29-.4,1,3.22,1.94,6.53,3.05,9.73,2.06,6.48,6.18,6.91,7.76,11.85.53,1.73.58,3.81-.25,5.41-.38.71-.95,1.28-1.73,1.43-1.27.24-2.42-.51-3.13-1.57-1.86-2.78-1.9-6.93.38-9.5.41-.47-.23-1.11-.7-.7-1.29,1.15-2.09,2.79-2.38,4.48-.29,1.71-.14,3.46.46,5.1.84,2.38,2.9,4.51,5.69,4.07,2.7-.43,4.02-3.4,4.12-5.82.2-2.95-.95-5.86-2.83-8.1-.99-1.21-2.23-2.34-3.1-3.54Z"/>
-            <path class="nc3" d="M6.34,20.21c.53,3.07,1.74,1.67,2.12.96.38-.71-.57-1.92-1.49-2.17-.75-.21-.72.73-.63,1.22Z"/>
-            <path class="nc3" d="M58.01,25.11l-.03-.25c-.1-.63-.46-1.21-.89-1.65-.22-.23-.45-.41-.67-.59v-.07c.09-.58.27-1.42-.09-1.99-.18-.29-.47-.51-.77-.65-.62-.31-1.44-.53-1.97-.86-.24-.21-.34-.62-.42-.96-.09-.44-.12-.94-.17-1.45-.07-.71-.11-1.43-.43-2.11-.08-.16-.19-.33-.31-.46-.58-.64-1.27-1.08-1.97-1.53-.45-.28-.9-.54-1.36-.79-1.47-.78-2.95-1.52-4.59-1.92-.42-.08-.9-.15-1.32-.24-1.44-.29-1.53-.62-1.9-1.92-.32-1.28-.75-2.52-1.29-3.73-.6-1.26-1.58-3.3-3.24-3.23-.52.03-1.27.42-1.43.92-.94,3.18-1.73,6.37-2.68,9.54-.16.54-.41,1.34-.58,1.87-.4,1.2-1.03,2.3-1.8,3.3-.37.52.35,1.09.77.63,1.01-1.14,1.84-2.52,2.35-3.99,0,0,.17-.47.17-.47,1.19-3.33,2.21-6.75,3.33-10.09,0,0,.01,0,.03,0,.19.08.34.23.52.43.44.52.76,1.14,1.06,1.77.43.93.81,1.92,1.1,2.91.19.67.36,1.35.69,1.97.68,1.3,2.08,1.51,3.39,1.72.2.03.49.07.69.12,1.87.5,3.67,1.42,5.34,2.4.59.37,1.21.75,1.67,1.23l.04.05.02.02s.01.02.01.02c.07.1.1.19.14.32.25.9.22,1.97.43,2.96.14.77.55,1.68,1.36,1.99.39.19.82.34,1.23.5-.44.5-.72.94-.34,1.92.23.59.73.76,1.14.38.04.09.1.18.16.26.08.08.17.16.25.22.59.45,1.18,1.03,1.12,1.77v.1s-.02.2-.02.2c-.03,1.21-.15,2.42-.64,3.52-.29.63-.69,1.21-1.19,1.69-.83.77-1.86,1.43-3.01,1.47-.87.04-1.74-.33-2.34-.96-.43-.49-1.17.12-.76.64.06.08.1.11.17.18.25.23.5.42.76.58-.17,0-.35-.02-.54-.06-.52-.12-1.14-.43-1.67-.7-.33-.16-.72-.37-1.12-.34-.1,0-.2.03-.3.06-2.34.67-4.8,1.64-6.36,3.64-.37.49-.68,1.04-.84,1.63-.14.51.51.87.86.48.69-.77,1.45-1.36,2.32-1.87,1.4-.83,2.94-1.46,4.47-2.05,1.37.5,3.26,1.08,4.44-.18.03-.03.05-.06.06-.09,1.87.37,3.85-.68,5.18-2.25.71-.85,1.18-1.9,1.42-2.97.2-.88.24-1.76.29-2.64,0-.12,0-.24,0-.37Z"/>
-            <path class="nc3" d="M51.81,20.21c.08-.49.12-1.43-.63-1.22-.92.25-1.86,1.46-1.49,2.17s1.59,2.12,2.12-.96Z"/>
-          </g></g></g>
-        </svg>
+      <a href="index.html" class="logo" aria-label="Front Door — home">
+        <img src="assets/images/logo.svg" alt="Front Door" width="180" height="56">
       </a>
 
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#about"       class="nav-link">About</a>
-        <a href="#what-we-do" class="nav-link">What we do</a>
-        <a href="#help"        class="nav-link">Help dogs</a>
-        <a href="#contact"     class="nav-link">Contact</a>
-        <a href="#contact"     class="btn btn-primary nav-cta">Contact us</a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <span class="nav-cta">
+          <a href="contact.html" class="btn btn-primary">Get started</a>
+        </span>
       </nav>
+
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
+  <main id="main-content">
 
-  <main>
-
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-         HERO
-    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
-    <section id="hero" aria-label="Introduction">
-
-      <div class="hero-bg" aria-hidden="true">
-        <img
-          src="https://images.pexels.com/photos/129634/pexels-photo-129634.jpeg?auto=compress&cs=tinysrgb&w=1600&h=1200&dpr=1"
-          alt=""
-          loading="eager"
-          fetchpriority="high"
-        >
-      </div>
-      <div class="hero-overlay" aria-hidden="true"></div>
-
-      <div class="hero-content">
-        <span class="label hero-kicker">Mila &amp; Molly Foundation</span>
-
-        <h1 class="hero-headline">
-          A safe place for dogs<br>
-          to be <em>rescued, healed,</em><br>
-          and deeply loved.
-        </h1>
-
-        <p class="hero-body">
-          Mila &amp; Molly Foundation supports dogs through rescue, sanctuary, medical care, and foster family placement — giving every dog the safety, compassion, and second chance they deserve.
-        </p>
-
-        <div class="hero-ctas">
-          <a href="#contact" class="btn btn-primary">Contact us</a>
-          <a href="#help"    class="btn btn-ghost-light">Support our mission</a>
-        </div>
-      </div>
-
-    </section>
-
-
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-         ABOUT / MISSION
-    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
-    <section id="about" aria-labelledby="about-heading">
-      <div class="container">
-        <div class="about-grid">
-
-          <div class="about-photo reveal">
-            <img
-              src="https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=900&h=1100&dpr=1"
-              alt="A calm and soulful dog resting comfortably"
-              loading="lazy"
-            >
+    <!-- ══ HERO ══ -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <span class="label reveal">El Segundo &amp; the South Bay</span>
+          <h1 id="hero-heading" class="reveal">Everything real estate.<br>One front door.</h1>
+          <p class="reveal">From escrow to closing and everything in between, Front Door simplifies the real estate process for buyers, sellers, and homeowners across El Segundo and the South Bay.</p>
+          <div class="btn-group reveal">
+            <a href="contact.html" class="btn btn-primary">Get started <span class="arrow" aria-hidden="true">→</span></a>
+            <a href="services.html" class="btn btn-outline">Explore services</a>
           </div>
-
-          <div class="about-text reveal reveal-d1">
-            <span class="label">About</span>
-            <h2 id="about-heading">All things dogs.<br>All heart.</h2>
-            <p>
-              Mila &amp; Molly Foundation exists to care for dogs in the ways that matter most. From immediate rescue and medical attention to long-term sanctuary and loving foster support, we are building a foundation centered around compassion, healing, and hope.
-            </p>
-            <p>
-              We believe every dog deserves safety, dignity, and the chance to live a healthy, loved life.
-            </p>
-          </div>
-
         </div>
       </div>
     </section>
 
-
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-         WHAT WE DO
-    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
-    <section id="what-we-do" aria-labelledby="wwd-heading">
+    <!-- ══ VALUE PROPS ══ -->
+    <section class="section section-alt" aria-labelledby="value-heading">
       <div class="container">
-
-        <div class="wwd-header reveal">
-          <span class="label">What we do</span>
-          <h2 id="wwd-heading">What we do for dogs</h2>
+        <div class="section-header centered text-center">
+          <span class="label reveal">Why Front Door</span>
+          <h2 id="value-heading" class="reveal">A better way to move through real estate</h2>
+          <p class="reveal">Real estate involves a lot of moving parts. We hold them together for you.</p>
         </div>
 
-        <div class="wwd-grid">
-
-          <div class="wwd-card reveal reveal-d1">
-            <span class="wwd-num" aria-hidden="true">01</span>
-            <h3>Rescue &amp; Charity</h3>
-            <p>We help dogs in urgent need by providing rescue support, funding, and compassionate care where it is needed most.</p>
+        <div class="grid-3">
+          <div class="value-card reveal">
+            <div class="value-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3>One trusted team</h3>
+            <p>You work with one team from start to finish. No handoffs, no confusion — just consistent, responsive support through every step.</p>
           </div>
 
-          <div class="wwd-card reveal reveal-d2">
-            <span class="wwd-num" aria-hidden="true">02</span>
-            <h3>Sanctuary</h3>
-            <p>We create a safe, loving place for dogs who need stability, recovery, or long-term support.</p>
+          <div class="value-card reveal">
+            <div class="value-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3>A simpler process</h3>
+            <p>We coordinate the details so you don't have to. From documents to deadlines, we keep everything organized and moving forward.</p>
           </div>
 
-          <div class="wwd-card reveal reveal-d3">
-            <span class="wwd-num" aria-hidden="true">03</span>
-            <h3>Medical Care</h3>
-            <p>We support dogs with the medical attention they need to heal, recover, and move toward a better life.</p>
+          <div class="value-card reveal">
+            <div class="value-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </div>
+            <h3>Local expertise</h3>
+            <p>We know El Segundo and the South Bay inside out. That local knowledge shapes the guidance we give at every stage of your journey.</p>
           </div>
-
-          <div class="wwd-card reveal reveal-d4">
-            <span class="wwd-num" aria-hidden="true">04</span>
-            <h3>Foster Family Support</h3>
-            <p>We believe healing happens best in loving environments. We help connect dogs with foster care and the support needed along the way.</p>
-          </div>
-
         </div>
       </div>
     </section>
 
-
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-         WHY IT MATTERS
-    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
-    <section id="why" aria-labelledby="why-heading">
+    <!-- ══ SERVICES PREVIEW ══ -->
+    <section class="section" aria-labelledby="services-heading">
       <div class="container">
-        <div class="why-grid">
+        <div class="section-header">
+          <span class="label reveal">What we do</span>
+          <h2 id="services-heading" class="reveal">Real estate support,<br>all in one place.</h2>
+          <p class="reveal">Whether you're buying, selling, navigating escrow, or figuring out your next step — we're here to make it clear.</p>
+        </div>
 
-          <div class="why-text reveal">
-            <span class="label">Why it matters</span>
-            <h2 id="why-heading">Every dog deserves a safe place to land.</h2>
-            <p>
-              Some dogs need urgent help. Some need time to heal. Some need medical care, stability, or simply a place where they are finally safe.
-            </p>
-            <p>
-              At Mila &amp; Molly Foundation, we are creating a place rooted in compassion — where dogs can be protected, cared for, and given the love they deserve.
-            </p>
+        <div class="grid-4">
+          <div class="service-card reveal">
+            <span class="service-card-label">Escrow</span>
+            <h3>Handled with clarity</h3>
+            <p>We manage escrow with care and clear communication, so you always know where things stand.</p>
+            <a href="escrow.html" class="service-card-link">Learn more <span class="arrow" aria-hidden="true">→</span></a>
           </div>
 
-          <div class="why-photo reveal reveal-d1">
-            <img
-              src="https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?auto=compress&cs=tinysrgb&w=900&h=1200&dpr=1"
-              alt="A dog with a gentle, hopeful expression looking quietly into the distance"
-              loading="lazy"
-            >
+          <div class="service-card reveal">
+            <span class="service-card-label">Buying</span>
+            <h3>Buy with confidence</h3>
+            <p>From your first showing to the moment you get the keys, we guide you through every decision.</p>
+            <a href="buying.html" class="service-card-link">Learn more <span class="arrow" aria-hidden="true">→</span></a>
           </div>
 
+          <div class="service-card reveal">
+            <span class="service-card-label">Selling</span>
+            <h3>Sell with a clear path</h3>
+            <p>We help you prepare, price, and close — with the local insight to get the outcome you're looking for.</p>
+            <a href="selling.html" class="service-card-link">Learn more <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+
+          <div class="service-card reveal">
+            <span class="service-card-label">Support</span>
+            <h3>End-to-end guidance</h3>
+            <p>Real estate has a lot of moving pieces. We coordinate them, so nothing slips through the cracks.</p>
+            <a href="services.html" class="service-card-link">Learn more <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
         </div>
       </div>
     </section>
 
-
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-         HOW TO HELP
-    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
-    <section id="help" aria-labelledby="help-heading">
+    <!-- ══ HOW IT WORKS ══ -->
+    <section class="section section-dark" aria-labelledby="process-heading">
       <div class="container">
-
-        <div class="help-header reveal">
-          <span class="label">Help dogs</span>
-          <h2 id="help-heading">There are many ways<br>to make a difference</h2>
-          <p>Whether you want to support our mission, become part of the journey, or simply learn more, we would love to hear from you.</p>
+        <div class="section-header centered text-center">
+          <span class="label reveal">How it works</span>
+          <h2 id="process-heading" class="reveal">Three steps to moving forward</h2>
+          <p class="reveal">We've built our process around making yours as smooth as possible.</p>
         </div>
 
-        <div class="help-grid">
-
-          <div class="help-card reveal reveal-d1">
-            <span class="help-roman" aria-hidden="true">I.</span>
-            <h3>Support our mission</h3>
-            <p>Your support helps us care for dogs through rescue, rehabilitation, medical treatment, and safe placement.</p>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step-number" aria-hidden="true">01</div>
+            <h3>Start with Front Door</h3>
+            <p>Tell us where you are in your real estate journey — buying, selling, escrow, or just exploring your options. We'll listen first.</p>
           </div>
 
-          <div class="help-card reveal reveal-d2">
-            <span class="help-roman" aria-hidden="true">II.</span>
-            <h3>Foster or partner with us</h3>
-            <p>We welcome foster families, supporters, and community partners who believe in giving dogs a second chance.</p>
+          <div class="step reveal">
+            <div class="step-number" aria-hidden="true">02</div>
+            <h3>We coordinate the details</h3>
+            <p>We take on the complexity — the paperwork, the timelines, the communication — and keep you informed every step of the way.</p>
           </div>
 
-          <div class="help-card reveal reveal-d3">
-            <span class="help-roman" aria-hidden="true">III.</span>
-            <h3>Reach out</h3>
-            <p>We are just getting started, and we would love to connect with people who want to help us grow.</p>
+          <div class="step reveal">
+            <div class="step-number" aria-hidden="true">03</div>
+            <h3>You move forward with confidence</h3>
+            <p>Whether it's signing at the close of escrow or getting the keys to your new home, you cross the finish line with clarity.</p>
           </div>
-
         </div>
       </div>
     </section>
 
-
-    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-         CONTACT
-    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
-    <section id="contact" aria-labelledby="contact-heading">
+    <!-- ══ LOCAL ══ -->
+    <section class="section local-section" aria-labelledby="local-heading">
       <div class="container">
-        <div class="contact-grid">
-
-          <div class="contact-info reveal">
-            <span class="label">Contact</span>
-            <h2 id="contact-heading">Get in touch</h2>
-            <p>
-              Have a question, want to support the foundation, or interested in getting involved? Reach out and we'll get back to you as soon as we can.
-            </p>
-
-            <div class="contact-details">
-              <a
-                href="mailto:hello@milamollyfoundation.org"
-                class="contact-detail-item"
-                aria-label="Email us at hello@milamollyfoundation.org"
-              >
-                <span class="detail-dot" aria-hidden="true"></span>
-                hello@milamollyfoundation.org
-              </a>
-              <a
-                href="https://instagram.com/milamollyfoundation"
-                class="contact-detail-item"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Follow us on Instagram @milamollyfoundation"
-              >
-                <span class="detail-dot" aria-hidden="true"></span>
-                @milamollyfoundation
-              </a>
+        <div class="grid-2">
+          <div>
+            <span class="label reveal">Rooted in the South Bay</span>
+            <h2 id="local-heading" class="reveal">We know this place.<br>It shows in our work.</h2>
+          </div>
+          <div>
+            <p class="reveal">Front Door is based in El Segundo, CA — and our knowledge of the South Bay goes deeper than market data. We understand the neighborhoods, the nuances, and the people who make this community home. That local perspective shapes every transaction we're a part of, from Hawthorne to Manhattan Beach and everywhere in between.</p>
+            <div class="btn-group reveal">
+              <a href="about.html" class="btn btn-outline">About us <span class="arrow" aria-hidden="true">→</span></a>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <form
-            class="contact-form reveal reveal-d1"
-            id="contact-form"
-            novalidate
-            aria-label="Contact form"
-          >
-            <div class="form-group">
-              <label class="form-label" for="name">Name</label>
-              <input
-                class="form-input"
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Your name"
-                autocomplete="name"
-                required
-              >
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="email">Email</label>
-              <input
-                class="form-input"
-                type="email"
-                id="email"
-                name="email"
-                placeholder="your@email.com"
-                autocomplete="email"
-                required
-              >
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="message">Message</label>
-              <textarea
-                class="form-textarea"
-                id="message"
-                name="message"
-                placeholder="Tell us how you'd like to get involved, or simply say hello..."
-                required
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
-              Send message
-            </button>
-          </form>
-
+    <!-- ══ CTA BAND ══ -->
+    <section class="cta-band" aria-labelledby="cta-heading">
+      <div class="container">
+        <span class="label reveal">Ready to begin?</span>
+        <h2 id="cta-heading" class="reveal">Let's open the right door.</h2>
+        <p class="reveal">Tell us where you are in the process — we'll help you take the next step.</p>
+        <div class="btn-group reveal">
+          <a href="contact.html" class="btn btn-accent">Start your journey <span class="arrow" aria-hidden="true">→</span></a>
+          <a href="services.html" class="btn btn-light">Explore services</a>
         </div>
       </div>
     </section>
 
   </main>
 
-
-  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-       FOOTER
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
-  <footer role="contentinfo">
+  <!-- ══ FOOTER ══ -->
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-inner">
-        <div>
-          <img src="images/mila and molly logo white.svg" alt="Mila &amp; Molly Foundation" class="logo-img footer-logo-img">
-          <p class="footer-tagline">Rescue. Sanctuary. Medical care. Foster support.</p>
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="Front Door — home">
+        <img src="assets/images/logo-white.svg" alt="Front Door" width="180" height="56">
+      </a>
+          <p class="footer-tagline">Real estate, simplified. From escrow to closing.</p>
+          <p class="footer-location">El Segundo, CA &bull; South Bay</p>
         </div>
-        <p class="footer-love">Made with love for dogs.</p>
+
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="escrow.html">Escrow</a></li>
+            <li><a href="buying.html">Buying</a></li>
+            <li><a href="selling.html">Selling</a></li>
+            <li><a href="services.html">All services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="mailto:hello@frontdoorre.com">hello@frontdoorre.com</a></li>
+            <li><a href="tel:+13105550100">(310) 555-0100</a></li>
+            <li><span style="color:rgba(255,255,255,0.35)">El Segundo, CA 90245</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2025 Front Door. All rights reserved.</span>
+        <span>El Segundo, CA &bull; Serving the South Bay</span>
       </div>
     </div>
   </footer>
 
-
-  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-       JAVASCRIPT
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-
-  <script>
-
-    /* ── Header scroll behavior ── */
-    const header = document.getElementById('site-header');
-
-    function updateHeader() {
-      header.classList.toggle('scrolled', window.scrollY > 24);
-    }
-
-    window.addEventListener('scroll', updateHeader, { passive: true });
-    updateHeader();
-
-
-    /* ── Scroll reveal (IntersectionObserver) ── */
-    const revealEls = document.querySelectorAll('.reveal');
-
-    const revealObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -48px 0px' }
-    );
-
-    revealEls.forEach(el => revealObserver.observe(el));
-
-
-    /* ── Contact form ── */
-    const form   = document.getElementById('contact-form');
-    const submitBtn = document.getElementById('submit-btn');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      submitBtn.textContent = 'Message sent ✓';
-      submitBtn.style.background    = '#6A9A72';
-      submitBtn.style.borderColor   = '#6A9A72';
-      submitBtn.style.pointerEvents = 'none';
-
-      setTimeout(() => {
-        submitBtn.textContent = 'Send message';
-        submitBtn.style.background    = '';
-        submitBtn.style.borderColor   = '';
-        submitBtn.style.pointerEvents = '';
-        form.reset();
-      }, 3500);
-    });
-
-
-    /* ── Smooth anchor scroll (fallback for older browsers) ── */
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const id = this.getAttribute('href');
-        if (id === '#') return;
-        const target = document.querySelector(id);
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
-
-  </script>
-
+  <script src="js/main.js"></script>
 </body>
 </html>
