@@ -408,9 +408,30 @@ a:hover .arrow { transform: translateX(3px); }
   padding-top: var(--hdr);
   position: relative;
   overflow: hidden;
+  background-color: var(--bg-dark);
+  background-image: url('../assets/images/hero-house.jpg');
+  background-size: cover;
+  background-position: center 55%;
+}
+
+/* Dark overlay */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(22, 32, 37, 0.80) 0%,
+    rgba(30, 44, 50, 0.65) 60%,
+    rgba(22, 32, 37, 0.55) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-inner {
+  position: relative;
+  z-index: 1;
   padding-block: clamp(5rem, 10vw, 9rem);
 }
 
@@ -420,13 +441,47 @@ a:hover .arrow { transform: translateX(3px); }
 
 .hero h1 {
   margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.hero .label {
+  color: var(--accent);
 }
 
 .hero p {
   font-size: clamp(1rem, 1.4vw, 1.15rem);
   max-width: 56ch;
-  color: var(--text-body);
+  color: rgba(255,255,255,0.80);
 }
+
+/* ── HEADER ON HERO PAGES (transparent + white logo) ── */
+.hero-page .site-header:not(.scrolled) {
+  background: transparent;
+  border-bottom-color: transparent;
+}
+
+.hero-page .site-header:not(.scrolled) .logo-dark { display: none; }
+.hero-page .site-header:not(.scrolled) .logo-white { display: inline-flex; }
+.logo-white { display: none; }
+.logo-dark  { display: inline-flex; }
+
+.hero-page .site-header:not(.scrolled) .primary-nav a {
+  color: rgba(255,255,255,0.80);
+}
+
+.hero-page .site-header:not(.scrolled) .primary-nav a:hover,
+.hero-page .site-header:not(.scrolled) .primary-nav a.active {
+  color: #fff;
+  background: rgba(255,255,255,0.10);
+}
+
+.hero-page .site-header:not(.scrolled) .nav-toggle span {
+  background: #fff;
+}
+
+/* scrolled state reverts to normal */
+.hero-page .site-header.scrolled .logo-dark  { display: inline-flex; }
+.hero-page .site-header.scrolled .logo-white { display: none; }
 
 /* ── PAGE HERO (inner pages) ── */
 .page-hero {
