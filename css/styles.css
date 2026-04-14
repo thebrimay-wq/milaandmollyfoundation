@@ -10,7 +10,7 @@
   --bg-dark:     #3F5259;
   --text:        #252E31;
   --text-body:   #4D5E64;
-  --text-muted:  #7A8C92;
+  --text-muted:  #5C6E75;
   --primary:     #3F5259;
   --primary-h:   #334449;
   --accent:      #C2B59B;
@@ -111,8 +111,15 @@ strong { font-weight: 500; color: var(--text); }
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--primary);   /* #3F5259 — 7.4:1 on light bg */
   margin-bottom: 1.25rem;
+}
+
+/* Restore warm accent on dark backgrounds where it reads well */
+.section-dark .label,
+.cta-band       .label,
+.hero           .label {
+  color: var(--accent);
 }
 
 /* ── LAYOUT ── */
@@ -451,7 +458,7 @@ a:hover .arrow { transform: translateX(3px); }
 .hero p {
   font-size: clamp(1rem, 1.4vw, 1.15rem);
   max-width: 56ch;
-  color: rgba(255,255,255,0.80);
+  color: rgba(255,255,255,0.88);
 }
 
 /* ── HEADER ON HERO PAGES (transparent + white logo) ── */
@@ -582,7 +589,7 @@ a:hover .arrow { transform: translateX(3px); }
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--primary);   /* high contrast on white cards */
 }
 
 .service-card h3 {
@@ -687,7 +694,7 @@ a:hover .arrow { transform: translateX(3px); }
 }
 
 .section-dark p {
-  color: rgba(255,255,255,0.72);
+  color: rgba(255,255,255,0.84);
 }
 
 .section-dark .label {
@@ -723,7 +730,7 @@ a:hover .arrow { transform: translateX(3px); }
 }
 
 .cta-band p {
-  color: rgba(255,255,255,0.72);
+  color: rgba(255,255,255,0.84);
   margin-inline: auto;
   font-size: 1.05rem;
   margin-bottom: 0;
@@ -960,14 +967,14 @@ select {
 
 .footer-tagline {
   font-size: 0.92rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.72);
   margin-top: 0.85rem;
   max-width: 26ch;
 }
 
 .footer-location {
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.58);
   margin-top: 0.4rem;
 }
 
@@ -989,12 +996,12 @@ select {
 
 .footer-col a {
   font-size: 0.88rem;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.75);
   transition: color 0.18s ease;
 }
 
 .footer-col a:hover {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.96);
 }
 
 .footer-bottom {
@@ -1007,7 +1014,7 @@ select {
   flex-wrap: wrap;
   gap: 1rem;
   font-size: 0.82rem;
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.52);
 }
 
 /* ── SCROLL ANIMATION ── */
